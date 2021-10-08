@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>_</head>
+    <style>
+        body { padding: 2em; }
+        .headContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .footerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background:lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .mainContainer{
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .mainContainItem{
+            text-align: left;
+            background: deepskyblue;
+        }
+        article{
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        .sideBarLeftItem{background: gold;}
+        .sideBarRightItem{background: hotpink;}
+
+        .sideBarItem {flex: 1 0 0; border: 0px solid green;}
+        .mainContainItem{flex: 3 0px;}
+        .sideBarLeftItem{order: 1;}
+        .mainContainItem{order: 2;}
+        .sideBarRightItem{order: 3;}
+    </style>
+    <body>
+        <header class="headContainer">Header</header>
+        <div class="mainContainer">
+            <section class="mainContainItem">
+                <article>
+                    <h2>First Article</h2>
+                    <p> The COP26 UN Climate Change Conference will take place 1–12 November 2021, in Glasgow, Scotland.
+                        The event will bring together country leaders, experts and environmental campaigners to take urgent action against climate change.
+                   </p>
+                </article>
+                <article>
+                    <h2>Second Article</h2>
+                    <p>World Mental Health Day, on 10 October,
+                        is a day to raise awareness of the effects mental illness has on millions of people’s lives across the world, and to help educate and inform us all.
+                    </p>
+                </article>
+                <article>
+                    <h2>Third Article</h2>
+                    <p>World Mental Health Day, on 10 October,
+                        is a day to raise awareness of the effects mental illness has on millions of people’s lives across the world, and to help educate and inform us all.
+                 </p>
+                </article>
+            </section>
+            <sidebar class="sideBarItem sideBarLeftItem">LEFT SIDE BAR</sidebar>
+            <sidebar class="sideBarItem sideBarRightItem">RIGHT SIDE BAR</sidebar>
+        </div>
+        <footer class="footerContainer">Footer</footer>
+    </body>
+</html>
