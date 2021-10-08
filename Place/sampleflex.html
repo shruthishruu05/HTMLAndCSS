@@ -1,50 +1,46 @@
 <html lang="en">
     <head>_</head>
     <style>
-        body { padding: 2em; }
-        .headContainer 
-        {
-            display: flex;
-            flex-flow: column wrap;
-            align-content: center;
-            background: tomato;
-            font-weight: bold;
-            padding: 10px;
+        * {
+          box-sizing: border-box; 
         }
-        .footerContainer {
-            display: flex;
-            flex-flow: column wrap;
-            align-content: center;
-            background:lightgreen;
-            font-weight: bold;
-            padding: 10px;
+        body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+          margin: 0;
         }
-        .mainContainer{
-            display: flex;
-            flex-flow: row wrap;
-            font-weight: bold;
-            text-align: center;
+        #main {
+          display: flex;
+          flex: 1;
         }
-        .mainContainItem{
-            text-align: left;
-            background: deepskyblue;
+        #main > article {
+          flex: 1;
+          order: 1;
         }
-        article{
-            padding: 10px;
-            margin: 10px;
-            background: aqua;
+        #main > nav, 
+        #main > aside {
+          flex: 0 0 20vw;
         }
-        .sideBarLeftItem{background: gold;}
-        .sideBarRightItem{background: hotpink;}
-
-        .sideBarItem {flex: 1 0 0; border: 0px solid green;}
-        .mainContainItem{flex: 3 0px;}
-        .sideBarLeftItem{order: 1;}
-        .mainContainItem{order: 2;}
-        .sideBarRightItem{order: 3;}
-    </style>
+        #main > nav {
+          background: #D7E8D4;
+          order: 3;
+        }
+        #main > aside {
+          background: beige;
+          order: 2;
+        }
+        header, footer {
+          background: yellowgreen;
+          height: 20vh;
+        }
+        header, footer, article, nav, aside {
+          padding: 1em;
+        }
+      </style>
     <body>
-        <header class="headContainer">Header</header>
+     
+        <!-- <header class="headContainer">Header</header>
         <div class="mainContainer">
             <section class="mainContainItem">
                 <article>
@@ -69,6 +65,36 @@
             <sidebar class="sideBarItem sideBarLeftItem">LEFT SIDE BAR</sidebar>
             <sidebar class="sideBarItem sideBarRightItem">RIGHT SIDE BAR</sidebar>
         </div>
-        <footer class="footerContainer">Footer</footer>
+        <footer class="footerContainer">Footer</footer> -->
+    
+    
+
+    <header>
+        <h1>Welcome To the site!!!</h1>
+    </header>
+      <div id="main">
+        <article> 
+        <h2>First Article</h2>
+            <p> The COP26 UN Climate Change Conference will take place 1–12 November 2021, in Glasgow, Scotland.
+                The event will bring together country leaders, experts and environmental campaigners to take urgent action against climate change.
+           </p><br><hr>
+           <h2>Second Article</h2>
+            <p>World Mental Health Day, on 10 October,
+                is a day to raise awareness of the effects mental illness has on millions of people’s lives across the world, and to help educate and inform us all.
+            </p><br><hr>
+
+            <h2>Third Article</h2>
+            <p>World Mental Health Day, on 10 October,
+                is a day to raise awareness of the effects mental illness has on millions of people’s lives across the world, and to help educate and inform us all.
+         </p>
+        </article>
+       
+        <nav>Nav</nav>
+        <aside>Aside</aside>
+      </div>
+      <footer>
+          <h4>contact at</h4>
+          <p>contact@gmail.com</p>
+      </footer>
     </body>
 </html>
